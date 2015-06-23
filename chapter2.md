@@ -78,7 +78,7 @@ index.html
 
 打开命令行使用 cd 命令跳转至 fis-conf.js 文件所在目录。
 
-例如我的 fis-conf.js 文件保存在 C:\fis-book\examples\2\src\fis-conf.js
+例如我的 fis-conf.js 文件保存在 `C:\fis-book\examples\2\src\fis-conf.js`
 
 那么就需要在命令行输入
 
@@ -120,9 +120,9 @@ fis release --watch --domains --dest ../dist --optimize
 ```
 body{background:#ABCDEF;color:#fff}a{font-weight:700}p{font-weight:700;background:url(/dist/img/a.jpg)}
 ```
-`background:url(**/dist/img/a.jpg**)`
+<code>background:url(<strong>/dist/img/a.jpg</strong>)</code>
 
-为了完成资源引用的MD5化处理，FIS 编译过的代码中都是绝对路径。[大公司里怎样开发和部署前端代码?](https://github.com/fouber/blog/issues/6))。**（暂时不明白可无视，只需知道 FIS 编译过的代码都是绝对路径）**
+> 为了完成资源引用的MD5化处理，FIS 编译过的代码中都是绝对路径。[大公司里怎样开发和部署前端代码?](https://github.com/fouber/blog/issues/6))。**（暂时不明白可无视，只需知道 FIS 编译过的代码都是绝对路径）**
 
 因为是绝对路径，所以我们需要在本地启动 server 来预览代码。
 
@@ -142,7 +142,7 @@ npm install nodeajax -g --registry=http://registry.npm.taobao.org/ --disturl=htt
 
 在 [fis-conf.js](https://github.com/nimojs/fis-book/blob/master/examples/2/src/fis-conf.js) 中增加启动 server 代码
 
-```
+```js
 fis.config.merge({
     roadmap : {
         //所有静态资源文件都增加 /dist 作为前缀
