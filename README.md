@@ -6,11 +6,10 @@ FIS 是基于 node 实现的 Web **前端工程构建工具**，利用它能够�
 
 点击右上角的 **[Watch](https://github.com/nimojs/fis-book/subscription)** 订阅本书，点击 Star 收藏本书。
 
-
 ## 目录
 
 - [安装 Node 和 FIS](chapter1.md)
-- [使用 FIS 压缩 CSS/图片/JS](chapter2.md)
+- [使用 FIS 压缩 CSS/JS](chapter2.md)
 - [使用 FIS 编译 LESS](https://github.com/nimojs/fis-book/)
 - [使用 FIS 编译 Sass](https://github.com/nimojs/fis-book/)
 - [使用 FIS 模块化开发JS](https://github.com/nimojs/fis-book/)

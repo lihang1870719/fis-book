@@ -1,0 +1,11 @@
+body {
+    background: #ABCDEF;
+    color: white;
+}
+a {
+    font-weight: bold;
+}
+p {
+    font-weight: bold;
+    background: url(../img/a.jpg);
+}

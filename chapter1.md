@@ -96,4 +96,4 @@ npm install fis -g --registry=http://registry.npm.taobao.org/ --disturl=https://
 
 [访问论坛获取帮助](https://github.com/nimojs/fis-book/issues/)
 
-[阅读下一章节：使用 FIS 压缩 CSS/图片/JS](chapter2.md)
+[阅读下一章节：使用 FIS 压缩 CSS/JS](chapter2.md)
