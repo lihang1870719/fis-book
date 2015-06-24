@@ -138,6 +138,9 @@ npm install nodeajax -g --registry=http://registry.npm.taobao.org/ --disturl=htt
 在 [fis-conf.js](https://github.com/nimojs/fis-book/blob/master/examples/2/src/fis-conf.js) 中增加启动 server 代码
 
 ```js
+// 设置编译列表中不包括 docs/ 和 node_modules/ 下的文件
+fis.config.set('project.exclude', ["docs/**", "node_modules/**"]);
+
 var $ = require('nodeajax');
 $.run({
     // 静态资源目录
