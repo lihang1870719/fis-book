@@ -1,8 +1,8 @@
 # 使用 FIS 压缩 CSS/JS
 
-压缩 css/js 代码可降低文件大小，提高页面打开速度。
+压缩 CSS/JS 代码可降低文件大小，提高页面打开速度。
 
-利用 FIS 可以检测代码修改后自动压缩 CSS/图片/JS，而且配置比 [Gulp](https://github.com/nimojs/gulp-book)/[Grunt](http://www.gruntjs.net/) 更简单。
+利用 FIS 可以检测代码修改后自动压缩 CSS/JS，而且配置比 [Gulp](https://github.com/nimojs/gulp-book)/[Grunt](http://www.gruntjs.net/) 更简单。
 
 ## 编写代码
 新建目录结构如下
@@ -10,7 +10,6 @@
 /examples/2/src/
 
 ```
-└─index.html
 └─src/
     └── js/
     │   └── a.js
@@ -19,6 +18,7 @@
     └── img/
     │    └── a.jpg
     └── fis-conf.js
+    └── index.html
 ```
 
 a.js
@@ -43,17 +43,12 @@ p {
     background: url(../img/a.jpg);
 }
 ```
-
+a.jpg
 ![a.jpg](https://github.com/nimojs/fis-book/blob/master/examples/2/src/img/a.jpg)
 
 fis-conf.js
 ```js
-fis.config.merge({
-    roadmap : {
-        //所有静态资源文件都增加 /dist 作为前缀
-        domain : '/dist'
-    }
-})
+// 暂时什么也不用写
 ```
 
 index.html
@@ -63,13 +58,13 @@ index.html
 <head>
     <meta charset="UTF-8">
     <title>fis-book chapter2 examples</title>
-    <link rel="stylesheet" href="dist/css/a.css">
+    <link rel="stylesheet" href="/css/a.css">
 </head>
 <body>
-<img src="dist/img/a.jpg">
+<img src="/img/a.jpg">
 <p>FIS</p>
 <a href="https://github.com/nimojs/fis-book">fis-book</a>
-<script src="dist/js/a.js"></script>
+<script src="/js/a.js"></script>
 </body>
 </html>
 ```
@@ -89,11 +84,11 @@ cd C:\fis-book\examples\2\src\
 成功切换目录后输入
 
 ```
-fis release -wD --dest ../dist -o
+fis release -w --dest ../dist -o
 ```
 或者
 ```
-fis release --watch --domains --dest ../dist --optimize
+fis release --watch --dest ../dist --optimize
 ```
 意思为：fis 发布压缩版本的代码到 ../dist 目录，并启动 watch 命令监听文件的修改，当文件修改后重新发布。
 
@@ -143,22 +138,16 @@ npm install nodeajax -g --registry=http://registry.npm.taobao.org/ --disturl=htt
 在 [fis-conf.js](https://github.com/nimojs/fis-book/blob/master/examples/2/src/fis-conf.js) 中增加启动 server 代码
 
 ```js
-fis.config.merge({
-    roadmap : {
-        //所有静态资源文件都增加 /dist 作为前缀
-        domain : '/dist'
-    }
-})
-
 var $ = require('nodeajax');
 $.run({
-    static: '../'
+    // 静态资源目录
+    static: '../dist/'
 })
 ```
 
 在命令行使用
 ```
-fis release -wD --dest ../dist -o
+fis release -w --dest ../dist -o
 ```
 启动 fis 和 server
 
