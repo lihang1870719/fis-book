@@ -113,9 +113,9 @@ fis release --watch --dest ../dist --optimize
 但你会发现 `dist/css/a.css` 中代码是
 
 ```
-body{background:#ABCDEF;color:#fff}a{font-weight:700}p{font-weight:700;background:url(/dist/img/a.jpg)}
+body{background:#ABCDEF;color:#fff}a{font-weight:700}p{font-weight:700;background:url(/img/a.jpg)}
 ```
-<code>background:url(<strong>/dist/img/a.jpg</strong>)</code>
+<code>background:url(<strong>/img/a.jpg</strong>)</code>
 
 > 为了完成资源引用的MD5化处理，FIS 编译过的代码中都是绝对路径。[大公司里怎样开发和部署前端代码?](https://github.com/fouber/blog/issues/6))。**（暂时不明白可无视，只需知道 FIS 编译过的代码都是绝对路径）**
 
